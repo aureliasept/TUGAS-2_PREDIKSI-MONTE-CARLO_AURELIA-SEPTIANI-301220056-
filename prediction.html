@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Prediksi</title>
+</head>
+<body>
+    <h1>Hasil Prediksi Monte Carlo</h1>
+    <p>Prediksi jumlah sampah untuk tahun {{ year }} adalah <strong>{{ prediction }}</strong> ton.</p>
+
+    <h2>Probabilitas</h2>
+    <ul>
+        <li>Probabilitas Naik: {{ probabilities['naik'] }}%</li>
+        <li>Probabilitas Turun: {{ probabilities['turun'] }}%</li>
+        <li>Probabilitas Stabil: {{ probabilities['stabil'] }}%</li>
+    </ul>
+
+    <h2>Interval Kepercayaan</h2>
+    <ul>
+        <li>Persentil 10%: {{ percentiles['10%'] }}</li>
+        <li>Persentil 25%: {{ percentiles['25%'] }}</li>
+        <li>Persentil 50%: {{ percentiles['50%'] }}</li>
+        <li>Persentil 75%: {{ percentiles['75%'] }}</li>
+        <li>Persentil 90%: {{ percentiles['90%'] }}</li>
+    </ul>
+
+    <a href="/">Kembali</a>
+</body>
+</html>

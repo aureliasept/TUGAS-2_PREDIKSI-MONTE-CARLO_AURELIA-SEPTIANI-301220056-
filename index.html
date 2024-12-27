@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Prediksi Penanganan Sampah Kota Bandung</h1>
+
+<!-- Form untuk memasukkan tahun -->
+<form action="/predict" method="post">
+    <label for="year">Masukkan Tahun:</label>
+    <input type="number" id="year" name="year" required>
+    <button type="submit">Prediksi</button>
+</form>
+
+<hr>
+
+<!-- Tabel data -->
+<h2>Data Capaian Penanganan Sampah</h2>
+<div>
+    {{ table_html|safe }}  <!-- Menampilkan tabel HTML -->
+</div>
+{% endblock %}
